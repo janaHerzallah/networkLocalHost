@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ENCS3320-My Tiny Webserver</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="selection-bar">
+    <img src="bzuLogo.png.jpg" align="left" width="150" height="50">
+        <div class="element">
+            <button class="button" id="Home">Home</button>
+         <button class="button" id="Arabic">Arabic</button>
+    <button class="button" id="learnPythonButton">Learn Python</button>
+
+    <button class="button" id="viewLaptopsButton">View Laptops</button>
+    <button class="button" id="sortByNameButton">Sort Laptops by Name</button>
+        <button class="button" id="sortByPriceButton">
+    Sort Laptops by Price
+    <img src="buy.jpg.png" alt="Buy" width="15px" height="12px">
+   </button>
+
+        <button class="button" id="htmlButton">.html</button>
+        <button class="button" id="cssButton">.css</button>
+        <button class="button" id="pngButton">.png</button>
+        <button class="button" id="jpgButton">.jpg</button>
+        </div>
+
+   </div>
+
+
+    <div class="header">
+        <div class="cotainer">
+            <div class="info">
+                <h1>ENCS3320-My Tiny Webserver</h1>
+            <p>Welcome to our course <span class="blue-text">Computer Networks, This is a tiny webserver</span>.</p>
+            </div>
+            <div class="aboutUs">
+                <div class="member-box">
+                    <div class="partcipent">
+                    <h2>Lana Badwan</h2>
+                    <p>Student ID: 1200071</p>
+                    <p>Projects: Web development, Data analysis</p>
+                    <p>Skills: Python, HTML/CSS, Data visualization</p>
+                    <p>Hobbies: Reading, hiking</p>
+                    </div>
+                </div>
+                <div class="member-box">
+                    <div class="partcipent">
+                        <h2>Jana Herzallah</h2>
+                    <p>Student ID: 1201139</p>
+                    <p>Projects: Circuit design, Embedded systems</p>
+                    <p>Skills: C/C++, java, Arduino,shell</p>
+                    <p>Hobbies: reading,swimming electronics, singing</p>
+                    </div>
+                </div>
+                <div class="member-box">
+                    <div class="partcipent">
+                        <h2>Dana Ismail</h2>
+                    <p>Student ID: 1200006</p>
+                    <p>Projects: Mobile app development, Machine learning</p>
+                    <p>Skills: Java, Android, Python</p>
+                    <p>Hobbies: Playing piano, photography</p>
+                    </div>
+                </div>
+            </div>
+            <div class="shape">
+                <div class="moon">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+    const learnPythonButton = document.getElementById("learnPythonButton");
+    const viewLaptopsButton = document.getElementById("viewLaptopsButton");
+    const sortByNameButton = document.getElementById("sortByNameButton");
+    const sortByPriceButton = document.getElementById("sortByPriceButton");
+
+        const htmlButton = document.getElementById("htmlButton");
+        const cssButton = document.getElementById("cssButton");
+        const pngButton = document.getElementById("pngButton");
+        const jpgButton = document.getElementById("jpgButton");
+
+    learnPythonButton.addEventListener("click", () => {
+        window.location.href = "https://www.w3schools.com/python/python_intro.asp";
+    });
+
+    viewLaptopsButton.addEventListener("click", async () => {
+        
+            window.location.href = "/laptops.txt"
+    });
+
+    sortByNameButton.addEventListener("click", () => {
+        window.location.href = "/SortByName"; // Redirect to /SortByName
+    });
+
+    sortByPriceButton.addEventListener("click", () => {
+        window.location.href = "/SortByPrice"; // Redirect to /SortByPrice
+    });
+
+    const arabicButton = document.getElementById("Arabic");
+
+    arabicButton.addEventListener("click", () => {
+        window.location.href = "main_ar.html"; // Redirect to Arabic version
+    });
+
+    htmlButton.addEventListener("click", async () => {
+       // Fetch the content of main_en.html
+       const response = await fetch("/main_en.html");
+       const htmlCode = await response.text();
+
+       // Create a new window or dialog and display the HTML code
+       const codeWindow = window.open("", "_blank", "width=600,height=400");
+        codeWindow.document.write("<pre>" + escapeHtml(htmlCode) + "</pre>");
+    });
+
+        // Function to escape HTML entities
+     function escapeHtml(unsafe) {
+       return unsafe.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+     }
+
+    cssButton.addEventListener("click", () => {
+        window.location.href = "/styles.css"; // Redirect to styles.css
+    });
+
+    pngButton.addEventListener("click", () => {
+        window.location.href = "img.png"; // Redirect to img.png
+    });
+
+    jpgButton.addEventListener("click", () => {
+        window.location.href = "bzuLogo.png.jpg"; // Redirect to buy.jpg
+    });
+    </script>
+</body>
+</html>

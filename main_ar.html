@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENCS3320-My Tiny Webserver</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="selection-bar">
+        <img src="bzuLogo.png.jpg" align="left" width="150" height="50">
+        <div class="element">
+            <button class="button" id="homeButton">الرئيسية</button>
+        <button class="button" id="arabicButton">اللغة الانجليزية</button>
+        <button class="button" id="learnPythonButton">تعلم بايثون</button>
+        <button class="button" id="viewLaptopsButton">عرض الأجهزة المحمولة</button>
+        <button class="button" id="sortByNameButton">فرز الأجهزة حسب الاسم</button>
+        <button class="button" id="sortByPriceButton">فرز الأجهزة حسب السعر</button>
+        <button class="button" id="htmlButton">.html</button>
+        <button class="button" id="cssButton">.css</button>
+        <button class="button" id="pngButton">.png</button>
+        <button class="button" id="jpgButton">.jpg</button>
+        </div>
+
+    </div>
+
+    <div class="header">
+        <div class="container">
+            <div class="info">
+                <h1>ENCS3320-موقع الويب الصغير</h1>
+    <p>.مرحبًا بك في مساقنا <span class="blue-text">شبكات الحاسوب، هذا هو خادم الويب الصغير</span></p>    
+            </div>
+    
+        <div class="aboutUs">
+            <div class="member-box">
+                <div class="partcipent">
+                    <h2>لانا بدوان</h2>
+                    <p>الرقم الجامعي: 1200071</p>
+                    <p>المشاريع: تطوير الويب، تحليل البيانات</p>
+                    <p>المهارات: بايثون، HTML/CSS، تصوير البيانات</p>
+                    <p>الهوايات: القراءة، رحلات الجبال</p>
+                </div>
+            </div>
+            <div class="member-box">
+                <div class="partcipent">
+                    <h2>جنى حرزالله</h2>
+                <p>الرقم الجامعي: 1201139</p>
+                <p>المشاريع: تصميم الدوائر، أنظمة مدمجة</p>
+                <p>المهارات: C/C++، تصميم الدوائر المطبوعة، أردوينو</p>
+                <p>الهوايات: إلكترونيات ، الرسم</p>
+                </div>
+            </div>
+            <div class="member-box">
+                <div class="partcipent">
+                    <h2>دانا إسماعيل</h2>
+                    <p>الرقم الجامعي : 1200006</p>
+                <p>المشاريع: تطوير تطبيقات الجوال، تعلم الآلة</p>
+                <p>المهارات: جافا، أندرويد، بايثون</p>
+                <p>الهوايات: العزف على البيانو، التصوير الفوتوغرافي</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="shape">
+            <div class="moon">
+            
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+        const learnPythonButton = document.getElementById("learnPythonButton");
+        const viewLaptopsButton = document.getElementById("viewLaptopsButton");
+        const sortByNameButton = document.getElementById("sortByNameButton");
+        const sortByPriceButton = document.getElementById("sortByPriceButton");
+        const homeButton = document.getElementById("homeButton");
+
+        learnPythonButton.textContent = "تعلم بايثون";
+        viewLaptopsButton.textContent = "عرض الأجهزة المحمولة";
+        sortByNameButton.textContent = "فرز الأجهزة حسب الاسم";
+        sortByPriceButton.textContent = "فرز الأجهزة حسب السعر";
+        homeButton.textContent = "الرئيسية";
+
+        learnPythonButton.addEventListener("click", () => {
+            window.location.href = "https://www.w3schools.com/python/python_intro.asp";
+        });
+
+        viewLaptopsButton.addEventListener("click", async () => {
+            
+            window.location.href = "/laptops.txt"
+        });
+
+        sortByNameButton.addEventListener("click", () => {
+            window.location.href = "/SortByName";
+        });
+
+        sortByPriceButton.addEventListener("click", () => {
+            window.location.href = "/SortByPrice";
+        });
+
+        homeButton.addEventListener("click", () => {
+            window.location.href = "main_en.html"; // Replace with the actual file path
+        });
+
+        htmlButton.addEventListener("click", async () => {
+       // Fetch the content of main_en.html
+       const response = await fetch("/main_en.html");
+       const htmlCode = await response.text();
+
+       // Create a new window or dialog and display the HTML code
+       const codeWindow = window.open("", "_blank", "width=600,height=400");
+        codeWindow.document.write("<pre>" + escapeHtml(htmlCode) + "</pre>");
+    });
+
+        // Function to escape HTML entities
+     function escapeHtml(unsafe) {
+       return unsafe.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+     }
+
+        cssButton.addEventListener("click", () => {
+            window.location.href = "/styles.css"; // Redirect to styles.css
+        });
+
+        pngButton.addEventListener("click", () => {
+            window.location.href = "/bzuLogo.png.jpg"; // Redirect to bzuLogo.png
+        });
+
+        jpgButton.addEventListener("click", () => {
+            window.location.href = "/buy.jpg.png"; // Redirect to buy.jpg
+        });
+
+        arabicButton.addEventListener("click", () => {
+            window.location.href = "main_en.html"; // Replace with the actual file path
+        });
+
+
+    </script>
+</body>
+</html>

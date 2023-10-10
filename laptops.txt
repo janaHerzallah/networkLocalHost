@@ -1,0 +1,12 @@
+Dell_Inspiron_15 799
+HP_Pavilion_x360 649
+Lenovo_ThinkPad_X1_Carbon 1399
+ASUS_ROG_Zephyrus_G14 1499
+Acer_Swift_3 599
+Microsoft_Surface_Laptop_4 1199
+Apple_MacBook_Air 999
+MSI_GS66_Stealth 1799
+Lenovo_IdeaPad_3 399
+HP_Envy_13  899
+Dell_XPS_13 1299
+ASUS_VivoBook_15 549

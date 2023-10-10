@@ -1,0 +1,168 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Dancing+Script:wght@400;500&family=Nanum+Myeongjo:wght@400;700;800&family=Qwitcher+Grypen&display=swap');
+/*
+font-family: 'Dancing Script', cursive;
+font-family: 'Nanum Myeongjo', serif;
+font-family: 'Qwitcher Grypen', cursive;
+font-family: 'Acme', sans-serif;
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+.info h1
+{
+    padding: 5px;
+    font-family: Nanum Myeongjo', serif;
+}
+
+.shape
+{
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+
+}
+
+.selection-bar {
+    border: solid black;
+    background-color: #445766;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 16px;
+    align-content: center;
+    align-items: center;
+    position: relative;
+   
+}
+
+.elment {
+    margin: 5px 0px;
+    text-align: center;
+    display: flex;
+    position: relative;
+}
+
+.element button {
+    margin: 2px;
+    padding: 5px;
+    border: solid #AAC7D8;
+    background-color: transparent;
+    font-weight: bold !important;
+    color: white;
+    border-radius: 9%;
+    transition: 3ms;
+    height: 32px;
+}
+
+.element button:hover {
+    background-color: #AAC7D8;
+    border-color: black;
+    color: black;
+}
+
+
+
+
+.aboutUs{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.member-box {
+    flex: 1;
+    border: 1px solid;
+    padding: 20px;
+    margin: 10px;
+   /* background-image:  repeating-radial-gradient(circle at 0 0, transparent 0, #bbd9f4 14px), repeating-linear-gradient(#768a96, #1b3854);
+    */background-color: #bbd9f4;
+    height: 300px;
+    
+
+    
+    }
+    
+
+    
+    
+    .partcipent {
+        background: rgba(255, 255, 255, 0.3);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        height: 280px;
+        padding: 5px;
+        line-height: 30px;
+        justify-content: center;
+        position: relative; /* Added for positioning the pseudo-element */
+    
+        /* Initial gradient border */
+        border-width: 5px;
+        border-style: solid;
+        border-image: linear-gradient(to bottom right, #768A96, transparent) 1;
+        transition: border-image 0.3s; /* Added transition for the border effect */
+    }
+
+    .partcipent  h2{
+        font-family: 'Acme', sans-serif;
+    }
+    
+    /* Hover effect */
+    .partcipent:hover {
+        border-image: linear-gradient(to bottom right, transparent, #768A96) 1;
+        background: transparent;
+    }
+    
+    
+    
+          
+
+.partcipent h2
+{
+    padding: 25px 0px;
+
+}
+    
+
+
+.blue-text {
+    color: blue;
+    font-family: 'Dancing Script', cursive;
+}
+
+.container
+{ 
+    width: 80%;
+}
+
+.header
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+}
+
+.moon
+{
+    width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      box-shadow: 15px 15px 0 0 black;
+      justify-content: right;
+     
+}
